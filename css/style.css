@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: green;
+    display: flex;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: cornflowerblue;
+}
+
+.sidebar {
+    width: 200px;
+    height: calc(100vh - 70px);
+    background-color: #000;
+}
+
+.main {
+    position: relative;
+    width: calc(100% - 200px);
+    height: calc(100vh - 70px);
+    background-color: darkblue;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: darkorchid;
+}
+
+/* dimensioni blocchi layout --------------------  */
+
+
+
