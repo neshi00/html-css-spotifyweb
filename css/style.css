@@ -12,6 +12,7 @@
 }
 
 .container {
+    position: relative;
     width: 100%;
     height: calc(100vh - 70px);
     background-color: green;
@@ -24,32 +25,31 @@ footer {
     background-color: #282828;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    z-index: 3;
 }
 
 .sidebar {
     width: 200px;
-    height: calc(100vh - 70px);
+    height: 100%;
     background-color: #000;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
 }
 
 .main {
     position: relative;
     width: calc(100% - 200px);
     height: calc(100vh - 70px);
-    background-color: darkblue;
+    background-color: #141922;
 }
 
 header {
     position: fixed;
     position: relative;
-    width: 100%;
+    width: calc(100% -200px);
     height: 70px;
     background-color: #080b12;
-    
 }
 
 /*  ---------------------------------------- utility */
@@ -64,14 +64,39 @@ header {
     font-size: 15px;
 }
 
+.title {
+    color: #fff;
+    font-weight: bold;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
 
 /* ------------------------------------------sidebar */
 
-.logo {
-    width: 100%;
-    height: 70px;
+.sidebar-down {
+    height: 50px;
+    
 }
 
+.sidebar-up {
+    height: calc(100% - 50px);
+    
+}
+
+.logo {
+    width: 100%;
+    /* height: 70px; */
+}
+ 
 .logo-image img {
     width: 100px;
     height: 70px;
@@ -79,7 +104,7 @@ header {
 
 .icon {
     width: 100%;
-    height: 100px;
+    /* height: 100px; */
 }
 
 .icon img {
@@ -99,9 +124,9 @@ header {
     text-decoration: none;
 }
 
-.crea-pl {
+/* .crea-pl {
     height: 30px;
-}
+} */
 
 .playlist span {
     color: #fff;
@@ -127,13 +152,18 @@ header {
     line-height: 30px;
 }
 
+.lista-pl {
+    overflow-y: auto;
+
+}
+
 .nome-pl {
     padding: 5px 0 5px 15px;
 }
 
 .install {
     color: white;
-    padding: 10px 0px;
+    /* padding: 10px 0px; */
 }
 
 .user-icon img {
@@ -147,7 +177,7 @@ header {
 }
 
 .profile {
-    padding: 10px 0px;
+    /* padding: 10px 0px; */
     border-top: 1px solid #a3a3a3;
 }
 
@@ -167,34 +197,117 @@ header {
     color: #fff;
 }
 
+/*  ------------------------------------------------------main  */
+
+.box-main {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.nav-album {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.nav-album a {
+    text-decoration: none;
+    color: #6e6e6e;
+}
+
+.box-album {
+    padding: 5px 15px;
+    width: calc(100% / 6 - 30px);
+}
+
+.box-album img {
+    width: 100%;
+}
+
+.box-row3 img {
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --------------------------------------------------footer */
 
 
-.footer-left {
-    width: 100px;
+.footer-left, .footer-right {
+    width: 250px;
     height: 70px;
-    background-color: seagreen;
+    max-width: calc(100% / 3);
+    padding: 20px 0;
 }
+
+.footer-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .footer-right {
+    display: flex;
+} */
 
 .footer-center {
-    width: 150px;
+    width: calc(100% - 500px);
     height: 70px;
-    background-color: steelblue;
-}
-
-.footer-right {
-    width: 200px;
-    height: 70px;
-    background-color: tomato;
+    flex-grow: 1;
+    padding: 20px 0;
 }
 
 .album-footer {
-    width: 40px;
+    width: 20px;
 }
 
 .album-footer img {
     width: 100%;
 }
+
+.icon-footer i {
+    color: #a3a3a3;
+    padding: 0 5px;
+}
+
+.icon-player {
+    display: flex;
+    justify-content: center;
+}
+
+.player-footer {
+    display: flex;
+    justify-content: center;
+}
+
+ #play1 {
+    width: 50%; 
+    margin: 0 15px;   
+}
+
+#play2 {
+    width: 50%;
+}
+
+.icon-ft-right i {
+    color: #fff;
+    padding: 0 5px;
+}
+
+
 
 
 
