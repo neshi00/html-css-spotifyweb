@@ -28,25 +28,26 @@
 
                         <div class="logo">
                             <div class="logo-image pdng">
-                                <img src="./img/logo.svg" alt="logo spotify">
+                                <img id="logo-desktop" class="hidden" src="./img/logo.svg" alt="logo spotify">
+                                <img id="logo-mobile" src="./img/logo-small.svg" alt="logo small">
                             </div>
                         </div>
                         <!-- icon------------- -->
                         <div class="icon">
                             <div class="pdng txt">
-                                <a href="#"><img src="./img/home.svg" alt="home icon"><span>Home</span></a>
+                                <a href="#"><img src="./img/home.svg" alt="home icon"><span class="hidden">Home</span></a>
                             </div>
                         
                             <div class="pdng txt">
-                                <a href="#"><img src="./img/search.svg" alt="search icon"><span>Cerca</span></a>
+                                <a href="#"><img src="./img/search.svg" alt="search icon"><span class="hidden">Cerca</span></a>
                             </div>
                         
                             <div class="pdng txt">
-                                <a href="#"><img src="./img/libreria.svg" alt="library icon"><span>Libreria</span></a>
+                                <a href="#"><img src="./img/libreria.svg" alt="library icon"><span class="hidden">Libreria</span></a>
                             </div>
                         </div>
                         <!-- crea playlist--------- -->
-                        <div class="playlist">
+                        <div class="playlist hidden">
 
                             <div class="pdng">
                                 <a href="#"><span>PLAYLIST</span></a>
@@ -58,41 +59,37 @@
                             </div>
                         </div>
                    
-                        
                 </div>
-
+                <!-- lista-scroll --------->
                 <div class="lista-scroll">
-                    <div class="nome-pl txt pdng">Nome playlist</div>
-                    <div class="nome-pl txt pdng">Nome playlist</div>
-                    <div class="nome-pl txt pdng">Nome playlist</div>
-                    <div class="nome-pl txt pdng">Nome playlist</div>
-                    <div class="nome-pl txt pdng">Nome playlist</div>
-                    <div class="nome-pl txt pdng">Nome playlist</div>
-                    <div class="nome-pl txt pdng">Nome playlist</div>    
+                    <div class="nome-pl txt pdng hidden">Nome playlist</div>
+                    <div class="nome-pl txt pdng hidden">Nome playlist</div>
+                    <div class="nome-pl txt pdng hidden">Nome playlist</div>
+                    <div class="nome-pl txt pdng hidden">Nome playlist</div>
+                    <div class="nome-pl txt pdng hidden">Nome playlist</div>
+                    <div class="nome-pl txt pdng hidden">Nome playlist</div>
+                    <div class="nome-pl txt pdng hidden">Nome playlist</div>    
                 </div>
-
-
-
 
 
                 <!-- sidebar-down------------------- -->
 
-                <div class="sidebar-down pdng">
+                <div class="sidebar-down">
 
                     <div class="box-sidedown">
 
-                        <div class="install txt">
+                        <div class="install txt pdng">
                             <div class="install-icon">
                                 <a href="#"><i class="far fa-arrow-alt-circle-down"></i></a>
-                                <span class="text-install">Installa app</span>
+                                <span class="text-install hidden">Installa app</span>
                             </div>
                         </div>
 
 
-                        <div class="profile ">
+                        <div class="profile pdng">
                             <div class="user-icon">
                                 <img src="./img/profile.svg" alt="profile">
-                                <span class="text-profile">
+                                <span class="text-profile hidden">
                                     Johnny Doe
                                 </span>
                             </div>
@@ -116,76 +113,97 @@
 
                     <div class="nav-album txt">
                         <a href="#">IN EVIDENZA</a>
-                        <a href="#">IN EVIDENZA</a>
-                        <a href="#">IN EVIDENZA</a>
-                        <a href="#">IN EVIDENZA</a>
-                        <a href="#">IN EVIDENZA</a>
-                        <a href="#">IN EVIDENZA</a>
+                        <a href="#">PODCAST</a>
+                        <a href="#">CLASSIFICHE</a>
+                        <a href="#">GENERI E MOOD</a>
+                        <a href="#">NUOVE USCITE</a>
+                        <a href="#">SCOPRI</a>
                     </div>
+
 
                     <div class="row">
 
-                        <h1>Recently Played</h1>
+                        <h1 class="title">Recently Played</h1>
 
-                        <div class="box-album box-row1 fl">
+                        <div class="box-album marg-bott-tablet fl">
                             <img src="./img/metal_lifting.jpg" alt="heavy metal">
-                        </div>
-
-                        <div class="box-album box-row1 fl">
-                            <img src="./img/metal_lifting.jpg" alt="heavy metal">
-                        </div>
-
-                        <div class="box-album box-row1 fl">
-                            <img src="./img/metal_lifting.jpg" alt="heavy metal">
-                        </div>
-
-                        <div class="box-album box-row1 fl">
-                            <img src="./img/metal_lifting.jpg" alt="heavy metal">
-                        </div>
-
-                        <div class="box-album box-row1 fl">
-                            <img src="./img/metal_lifting.jpg" alt="heavy metal">
-                        </div>
-
-                        <div class="box-album box-row1 fl">
-                            <img src="./img/metal_lifting.jpg" alt="heavy metal">
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <h1>Creato per Jhon Doe</h1>
-                        <p>Più ascolti, più accurati saranno i suggerimenti</p>
-
-                        <div class="box-album fl">
-                            <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                            <div class="description-album">
+                                <h1 class="title">Heavy Metal</h1>
+                                <p class="txt">Subtitle</p>
+                            </div>
                         </div>
 
                         <div class="box-album fl">
-                            <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                            <img src="./img/stranger.jpeg" alt="stranger">
+                            <div class="description-album">
+                                <h1 class="title">Stranger Things, vol. 1 (a Netflix Original Series Soundtrack)</h1>
+                                <p class="txt">Kyle Dixon & Michael Stein</p>
+                            </div>
+                        </div>
+
+                        <div class="box-album marg-bott-tablet fl">
+                            <img src="./img/aquietplace.jpeg" alt="quiet">
+                            <div class="description-album">
+                                <h1 class="title">A quiet place</h1>
+                                <p class="txt">Subtitle</p>
+                            </div>
+                        </div>
+
+                        <div class="box-album marg-bott-tablet fl">
+                            <img src="./img/split.jpeg" alt="album split">
+                            <div class="description-album">
+                                <h1 class="title">Split</h1>
+                                <p class="txt">Subtitle</p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="box-album fl">
+                            <img src="./img/cure.jpeg" alt="album cure">
+                            <div class="description-album">
+                                <h1 class="title">A cure for welness</h1>
+                                <p class="txt">Subtitle</p>
+                            </div>
+                        </div>
+                       
+
+                        <div class="box-album fl">
+                            <img src="./img/sinister.jpeg" alt="album sinister">
+                            <div class="description-album">
+                                <h1 class="title">Sinister</h1>
+                                <p class="txt">Subtitle</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h1 class="title">Creato per Jhon Doe</h1>
+                        <p class="txt">Più ascolti, più accurati saranno i suggerimenti</p>
+
+                        <div class="box-album fl">
+                            <img src="./img/radar.jpeg" alt="realease radar">
+                        </div>
+
+                        <div class="box-album fl">
+                            <img src="./img/mixdaily.jpeg" alt="mix daily">
                         </div>
                     </div>
 
 
                     <div class="row">
 
-                        <h1>Creato per Jhon Doe</h1>
-                        <p>Più ascolti, più accurati saranno i suggerimenti</p>
+                        <h1 class="title">Artisti più popolari</h1>
+                        <p class="txt">Più ascolti, più accurati saranno i suggerimenti</p>
 
                         <div class="box-album box-row3 fl">
-                            <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                            <img src="./img/youg.jpeg" alt="youg">
                         </div>
 
                         <div class="box-album box-row3 fl">
-                            <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                            <img src="./img/einaudi.jpeg" alt="einaudi">
                         </div>
                     </div>
                 </div>
-
-
-
-
 
             </div>
 

@@ -15,7 +15,6 @@
     position: relative;
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: green;
     display: flex;
 }
 
@@ -42,6 +41,7 @@ footer {
     width: calc(100% - 200px);
     height: calc(100vh - 70px);
     background-color: #141922;
+    overflow-y: scroll;
 }
 
 header {
@@ -55,7 +55,7 @@ header {
 /*  ---------------------------------------- utility */
 
 .pdng {
-    padding: 0 15px;
+    padding: 5px 15px;
 }
 
 .txt {
@@ -86,8 +86,12 @@ header {
 .logo {
     width: 100%;
 }
+
+#logo-mobile {
+    display: none;
+}
  
-.logo-image img {
+#logo-desktop {
     width: 100px;
     height: 70px;
 }
@@ -133,6 +137,10 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.fa-arrow-alt-circle-down {
+    color: #a3a3a3;
+}
+
 .crea-pl span {
     line-height: 30px;
 }
@@ -141,20 +149,19 @@ header {
     flex-grow: 1;
     overflow-y: auto;
     min-height: 100px;
-
 }
 
 .nome-pl {
     padding: 5px 0 5px 15px;
+    font-size: 8px;
 }
 
 .install {
     color: white;
-    /* padding: 10px 0px; */
 }
 
 .user-icon img {
-    height: 30px;
+    height: 20px;
     background-color: #a3a3a3;
     border-radius: 50%;
 }
@@ -164,7 +171,6 @@ header {
 }
 
 .profile {
-    /* padding: 10px 0px; */
     border-top: 1px solid #a3a3a3;
 }
 
@@ -187,7 +193,6 @@ header {
 /*  ------------------------------------------------------main  */
 
 .box-main {
-    overflow-y: auto;
     height: 100%;
 }
 
@@ -200,6 +205,11 @@ header {
 .nav-album a {
     text-decoration: none;
     color: #6e6e6e;
+    padding: 0 10PX;
+}
+
+.row h1, .row p {
+    padding: 10px 0;
 }
 
 .box-album {
@@ -215,20 +225,14 @@ header {
     border-radius: 50%;
 }
 
+.description-album {
+    text-align: center;
+    font-size: 8px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.description-album p {
+    padding: 5px 0;
+}
 
 
 /* --------------------------------------------------footer */
@@ -245,10 +249,6 @@ header {
     display: flex;
     justify-content: space-between;
 }
-
-/* .footer-right {
-    display: flex;
-} */
 
 .footer-center {
     width: calc(100% - 500px);
@@ -293,6 +293,69 @@ header {
     color: #fff;
     padding: 0 5px;
 }
+
+
+/* media query -------------------------------------- */
+
+
+/* tablet ------------------------------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+    .box-album {
+        width: calc(100% / 4 - 10px);
+    }  
+
+    .marg-bott-tablet {
+        margin-bottom: 100px;
+    }
+}
+
+/*  medium --------------------------------------------- */
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+    .box-album {
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+/* mobile ----------------------------------------------- */
+
+@media screen and (max-width: 575px) {
+
+    .hidden {
+        display: none;
+    }
+
+    .box-album {
+        width: calc(100% / 2 - 10px);
+    }
+
+    .sidebar {
+        width: 50px;
+        height: calc(100vh - 70px);
+        background-color: #000;
+    }
+
+    #logo-mobile {
+        display: block;
+    }
+
+    .logo-image {
+        width: 50px;
+    }
+
+    .main {
+        position: relative;
+        width: calc(100% - 50px);
+        height: calc(100vh - 70px);
+        background-color: #141922;
+    }
+
+
+}
+
 
 
 
