@@ -31,7 +31,7 @@ footer {
 
 .sidebar {
     width: 200px;
-    height: 100%;
+    height: calc(100vh - 70px);
     background-color: #000;
     display: flex;
     flex-direction: column;
@@ -82,19 +82,9 @@ header {
 
 /* ------------------------------------------sidebar */
 
-.sidebar-down {
-    height: 50px;
-    
-}
-
-.sidebar-up {
-    height: calc(100% - 50px);
-    
-}
 
 .logo {
     width: 100%;
-    /* height: 70px; */
 }
  
 .logo-image img {
@@ -104,7 +94,6 @@ header {
 
 .icon {
     width: 100%;
-    /* height: 100px; */
 }
 
 .icon img {
@@ -123,10 +112,6 @@ header {
 .playlist a {
     text-decoration: none;
 }
-
-/* .crea-pl {
-    height: 30px;
-} */
 
 .playlist span {
     color: #fff;
@@ -152,8 +137,10 @@ header {
     line-height: 30px;
 }
 
-.lista-pl {
+.lista-scroll {
+    flex-grow: 1;
     overflow-y: auto;
+    min-height: 100px;
 
 }
 
@@ -216,8 +203,8 @@ header {
 }
 
 .box-album {
-    padding: 5px 15px;
-    width: calc(100% / 6 - 30px);
+    padding: 5px 5px;
+    width: calc(100% / 6 - 10px);
 }
 
 .box-album img {
