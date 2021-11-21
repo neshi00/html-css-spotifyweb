@@ -25,7 +25,7 @@ footer {
     display: flex;
     justify-content: space-between;
     position: absolute;
-    z-index: 3;
+    z-index: 5;
 }
 
 .sidebar {
@@ -79,6 +79,10 @@ header {
     float: left;
 }
 
+.hover-white:hover {
+    color: #fff;
+}
+
 
 /* ------------------------------------------sidebar */
 
@@ -105,9 +109,13 @@ header {
     vertical-align: middle;
 }
 
+#home {
+    color: #fff;
+}
+
 .icon span {
     line-height: 30px;
-    color: #fff;
+    color: #a3a3a3;
     padding: 0 5px;
     font-size: 15px;
 }
@@ -145,10 +153,19 @@ header {
     line-height: 30px;
 }
 
+.crea-pl a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .lista-scroll {
     flex-grow: 1;
     overflow-y: auto;
     min-height: 100px;
+}
+
+.lista-scroll a {
+    text-decoration: none;
 }
 
 .nome-pl {
@@ -156,8 +173,12 @@ header {
     font-size: 8px;
 }
 
-.install {
-    color: white;
+.box-sidedown a {
+    text-decoration: none;
+}
+
+.install a {
+    color: #a3a3a3;
 }
 
 .user-icon img {
@@ -174,7 +195,7 @@ header {
     border-top: 1px solid #a3a3a3;
 }
 
-/* -------------------------------------------------header */
+/* ------------------------------------------------------header */
 
 .upgrade-button {
     position: absolute;
@@ -183,6 +204,11 @@ header {
     padding: 10px 20px;
     border: 1px solid #fff;
     border-radius: 20px;
+    scale: 0;
+}
+
+.upgrade-button:hover {
+    transform: scale(1.1);
 }
 
 .upgrade-button a {
@@ -208,6 +234,10 @@ header {
     padding: 0 10PX;
 }
 
+.nav-album a:hover {
+    color: #fff;
+}
+
 .row h1, .row p {
     padding: 10px 0;
 }
@@ -215,6 +245,7 @@ header {
 .box-album {
     padding: 5px 5px;
     width: calc(100% / 6 - 10px);
+    position: relative;
 }
 
 .box-album img {
@@ -234,8 +265,38 @@ header {
     padding: 5px 0;
 }
 
+.box-album a {
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 38%;
+    left: 50%;
+    color: #fff;
+}
 
-/* --------------------------------------------------footer */
+.box-album img:hover {
+    filter: opacity(.4);
+}
+
+.box-album .fa-play-circle {
+    font-size: 60px;
+}
+
+.box-album:hover a {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------footer */
 
 
 .footer-left, .footer-right {
@@ -257,8 +318,14 @@ header {
     padding: 20px 0;
 }
 
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .album-footer {
-    width: 20px;
+    width: 50px;
+    padding-left: 15px;
 }
 
 .album-footer img {
@@ -275,18 +342,32 @@ header {
     justify-content: center;
 }
 
+.icon-player a {
+    color: #fff;
+    padding: 0 5px;
+}
+
+.fa-play-circle {
+    font-size: 25px;
+}
+
 .player-footer {
     display: flex;
     justify-content: center;
 }
 
- #play1 {
-    width: 50%; 
-    margin: 0 15px;   
+.barra-player {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #535353;
+    border-radius: 20px;
+    margin: 5px 20px;
 }
 
-#play2 {
-    width: 50%;
+.barra-player div {
+    width: 30%;
+    height: 5px;
+    background-color: #adadad;
 }
 
 .icon-ft-right i {
@@ -298,7 +379,7 @@ header {
 /* media query -------------------------------------- */
 
 
-/* tablet ------------------------------------------- */
+/* tablet ----------------------------------------------------- */
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
 
@@ -311,7 +392,7 @@ header {
     }
 }
 
-/*  medium --------------------------------------------- */
+/*  medium ---------------------------------------------------- */
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
 
@@ -320,7 +401,7 @@ header {
     }
 }
 
-/* mobile ----------------------------------------------- */
+/* mobile ----------------------------------------------------- */
 
 @media screen and (max-width: 575px) {
 
